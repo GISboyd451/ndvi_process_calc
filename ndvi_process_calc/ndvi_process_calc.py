@@ -1,6 +1,6 @@
 #
 # Python 3.7
-# Author: Alec Boyd (Contractor)
+# Author: GISboyd451 (Contractor)
 #
 #
 
