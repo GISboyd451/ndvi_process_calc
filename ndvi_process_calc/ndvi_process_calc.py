@@ -62,7 +62,7 @@ full_name = file_list
 # Put all parsed out varaibles into a pandas dataframe 
 user_database = pd.DataFrame(
     {'satellite':satellite,
-    'prcoessing':processing,
+    'processing':processing,
     'path':path,
     'row':row,
     'year':year,
@@ -79,6 +79,9 @@ user_database["full_date"] = user_database["year"].map(str) + user_database["mon
 # Reorder database table
 user_database = user_database.sort_values(by=['full_date', 'product_band'])
 #print(user_database)
+
+# Export our database as a csv so we can reference later if need be:
+user_database.to_csv("user_database.csv", index=False)
 
 # Globally disable possible division by zero:
 np.seterr(divide='ignore')
